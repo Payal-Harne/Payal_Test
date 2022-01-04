@@ -1,0 +1,253 @@
+<AssetData xmlns="http://namespaces.softwareag.com/webMethods/MFT_NS" version="10.7.0.0.405" timetamp="2021-09-30T14:01:03"><assetType xmlns="" name="scheduleAction"><asset><data><scheduledAction>
+    <active>false</active>
+    <advancedEventData>
+        <actionNameWhereParallelProcessingStarts> </actionNameWhereParallelProcessingStarts>
+        <maxNumberOfParallelProcessing>1</maxNumberOfParallelProcessing>
+        <processFilesInParallel>true</processFilesInParallel>
+    </advancedEventData>
+    <description>This event will pick up file from Workday's sftp folder in csv format and after encryption place it to Coupa</description>
+    <id>5dn32200fahr951500000016</id>
+    <name>CPRI_FIN_WDY_INT060_009_EmpMasterInformation_COP</name>
+    <properties>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">maxNumberOfParallelProcessing</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">1</value>
+        </entry>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">processFilesInParallel</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">true</value>
+        </entry>
+        <entry>
+            <key xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">actionNameWhereParallelProcessingStarts</key>
+            <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"> </value>
+        </entry>
+    </properties>
+    <schedule>
+        <hours>12</hours>
+        <minutes>0</minutes>
+        <scheduleFrequency>scheduleTypes3Daily</scheduleFrequency>
+        <startDate>2021/07/15</startDate>
+        <startTime>06:50:11</startTime>
+        <timeZone>UTC</timeZone>
+        <type>complex</type>
+    </schedule>
+    <scheduleId>5dn32200fahr951500000016</scheduleId>
+    <findFileTask>
+        <actionId>5dn37500fahsfcpg00000012</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <taskName>Find files from Workday CFS location</taskName>
+        <checkStabilityInterval>0</checkStabilityInterval>
+        <checkStabilityOnce>true</checkStabilityOnce>
+        <checkStabilityTimeout>0</checkStabilityTimeout>
+        <delayTillNoChange>false</delayTillNoChange>
+        <depth>1</depth>
+        <excludeChangingFiles>false</excludeChangingFiles>
+        <extractFileNameFromUrl>false</extractFileNameFromUrl>
+        <fileNameFilter>Coupa-Users-*.csv</fileNameFilter>
+        <fileUrl>/WDY/inbound/INT060/CFS/</fileUrl>
+        <filterPresent>true</filterPresent>
+        <findRetryInterval>0</findRetryInterval>
+        <findTimeOut>0</findTimeOut>
+        <ignoreFolders>false</ignoreFolders>
+        <interruptProcess>false</interruptProcess>
+        <lastModificationDays>0</lastModificationDays>
+        <lastModificationHours>0</lastModificationHours>
+        <lastModificationMinutes>0</lastModificationMinutes>
+        <lastModificationMode>OLDER</lastModificationMode>
+        <maxItemsLimit>0</maxItemsLimit>
+        <overridePartner>false</overridePartner>
+        <partnerId />
+        <proxyAlias />
+        <remoteFile>false</remoteFile>
+        <replaceServerVariable>true</replaceServerVariable>
+        <sortFiles>false</sortFiles>
+        <sslKeyPassword />
+        <sslKeystorePassword />
+        <sslKeystorePath />
+        <useActiveTransferHTTP>true</useActiveTransferHTTP>
+        <useCustomProxyEnabled>false</useCustomProxyEnabled>
+        <useProxyEnabled>true</useProxyEnabled>
+        <vfsReference>true</vfsReference>
+    </findFileTask>
+    <moveFileTask>
+        <actionId>5dn37500fb1r14os000000am</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter />
+        <taskName>Move to ESB work directory</taskName>
+        <ascii>false</ascii>
+        <asciiConvert>none</asciiConvert>
+        <createDirectory>false</createDirectory>
+        <destinationUrl>/WDY/inbound/INT060/FS/employeeMasterInformation/work/</destinationUrl>
+        <failActionIfFileExists>false</failActionIfFileExists>
+        <giveUpAfter>60</giveUpAfter>
+        <moveRetryInterval>0</moveRetryInterval>
+        <moveUnique>false</moveUnique>
+        <overridePartner>false</overridePartner>
+        <partnerId />
+        <preserveFileDate>false</preserveFileDate>
+        <proxyAlias />
+        <remoteDestination>false</remoteDestination>
+        <retryFail>0</retryFail>
+        <retryFailTimes>0</retryFailTimes>
+        <retryFromPointOfInterruption>0</retryFromPointOfInterruption>
+        <retryWhenInterrupted>0</retryWhenInterrupted>
+        <simple>false</simple>
+        <siteCommandBeforeUpload />
+        <skipTransferIfFileExists>false</skipTransferIfFileExists>
+        <useCustomProxyEnabled>false</useCustomProxyEnabled>
+        <useProxyEnabled>true</useProxyEnabled>
+        <vfsReference>true</vfsReference>
+        <wait>2</wait>
+    </moveFileTask>
+    <decryptFile>
+        <actionId>5dn37500fb40dchd0000000b</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter />
+        <taskName>Decrypt the file at ESB work folder</taskName>
+        <asciiArmour>false</asciiArmour>
+        <deleteOriginal>false</deleteOriginal>
+        <deriveFileNameFromInput>false</deriveFileNameFromInput>
+        <keyFile>FILE:///apps/scope/.gnupg/CPRIESBWorkdayPvtKey.asc/</keyFile>
+        <password>tkcOCz66LOUGvRaeiBkqKA==</password>
+    </decryptFile>
+    <encryptFile>
+        <actionId>5dn37500fbjrv75e000001cf</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter>*.csv</sourceFilter>
+        <taskName>Encrypt with Coupas' Public key</taskName>
+        <asciiArmour>false</asciiArmour>
+        <deleteOriginal>false</deleteOriginal>
+        <keyFile>FILE:///apps/scope/.gnupg/capri-test.coupahost.com_standard---endpoint__sftpinstance.pub/</keyFile>
+        <withIntegrityCheck>false</withIntegrityCheck>
+    </encryptFile>
+    <moveFileTask>
+        <actionId>5dn37500fbjs2emg000001ch</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter>*.pgp</sourceFilter>
+        <taskName>Move encrypted file to COUPA SFTP location</taskName>
+        <ascii>false</ascii>
+        <asciiConvert>none</asciiConvert>
+        <createDirectory>false</createDirectory>
+        <destinationUrl>/COP/outbound/INT060/SFTP_COUPAUSERS/</destinationUrl>
+        <failActionIfFileExists>false</failActionIfFileExists>
+        <giveUpAfter>60</giveUpAfter>
+        <moveRetryInterval>0</moveRetryInterval>
+        <moveUnique>false</moveUnique>
+        <overridePartner>false</overridePartner>
+        <partnerId />
+        <preserveFileDate>false</preserveFileDate>
+        <proxyAlias />
+        <remoteDestination>false</remoteDestination>
+        <retryFail>0</retryFail>
+        <retryFailTimes>0</retryFailTimes>
+        <retryFromPointOfInterruption>0</retryFromPointOfInterruption>
+        <retryWhenInterrupted>0</retryWhenInterrupted>
+        <simple>false</simple>
+        <siteCommandBeforeUpload />
+        <skipTransferIfFileExists>false</skipTransferIfFileExists>
+        <useCustomProxyEnabled>false</useCustomProxyEnabled>
+        <useProxyEnabled>true</useProxyEnabled>
+        <vfsReference>true</vfsReference>
+        <wait>2</wait>
+    </moveFileTask>
+    <deleteFileTask>
+        <actionId>5dn37500ff088kfb000000bt</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter>*.decrypting</sourceFilter>
+        <taskName>Delete_1</taskName>
+        <deleteRetryInterval>0</deleteRetryInterval>
+        <deleteTimeOut>0</deleteTimeOut>
+    </deleteFileTask>
+    <isSvcInvocationFileTask>
+        <actionId>5dn37500ff5jh0po00000190</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>false</errorTask>
+        <executeErrorTask>true</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter />
+        <taskName>CIF service for successful logging</taskName>
+        <includeFileContent>false</includeFileContent>
+        <includeFilePath>false</includeFilePath>
+        <inputDataForSvc>&lt;![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;IDataXMLCoder version="1.0"&gt;
+  &lt;record javaclass="com.wm.data.ISMemDataImpl"&gt;
+    &lt;value name="username"&gt;%user_name%&lt;/value&gt;
+    &lt;value name="filename"&gt;%the_file_name%&lt;/value&gt;
+    &lt;value name="errorInformation"&gt;%task_error%&lt;/value&gt;
+    &lt;value name="filepath"&gt;%the_file_path%&lt;/value&gt;
+    &lt;value name="cifProcessID"&gt;FIN_INT060_009&lt;/value&gt;
+    &lt;value name="cifDestinationSystem"&gt;COP&lt;/value&gt;
+    &lt;value name="cifSourceSystem"&gt;ESBMFT&lt;/value&gt;
+    &lt;value name="interfaceId"&gt;FIN_INT060_009_MFT&lt;/value&gt;
+    &lt;value name="interfaceModule"&gt;CPRI_FIN_ESB_INT060_009_EmployeeMasterInformation_COP&lt;/value&gt;
+    &lt;value name="level"&gt;1.0&lt;/value&gt;
+  &lt;/record&gt;
+&lt;/IDataXMLCoder&gt;
+
+]]&gt;</inputDataForSvc>
+        <outputMap />
+        <runAlways>false</runAlways>
+        <serviceName>CapriCIFCommon.utils.mftCIFLog:sendDIMMessage</serviceName>
+    </isSvcInvocationFileTask>
+    <isSvcInvocationFileTask>
+        <actionId>5dn37500ff5k2sn500000194</actionId>
+        <classVersionID>4</classVersionID>
+        <disabled>false</disabled>
+        <errorTask>true</errorTask>
+        <executeErrorTask>false</executeErrorTask>
+        <multiThreaded>false</multiThreaded>
+        <sourceFilter />
+        <taskName>CIF service for failure logging</taskName>
+        <includeFileContent>false</includeFileContent>
+        <includeFilePath>false</includeFilePath>
+        <inputDataForSvc>&lt;![CDATA[
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;IDataXMLCoder version="1.0"&gt;
+  &lt;record javaclass="com.wm.data.ISMemDataImpl"&gt;
+    &lt;value name="username"&gt;%user_name%&lt;/value&gt;
+    &lt;value name="filename"&gt;%the_file_name%&lt;/value&gt;
+    &lt;value name="errorInformation"&gt;%task_error%&lt;/value&gt;
+    &lt;value name="filepath"&gt;%the_file_path%&lt;/value&gt;
+    &lt;value name="cifProcessID"&gt;FIN_INT060_009&lt;/value&gt;
+    &lt;value name="cifDestinationSystem"&gt;COP&lt;/value&gt;
+    &lt;value name="cifSourceSystem"&gt;ESBMFT&lt;/value&gt;
+    &lt;value name="interfaceId"&gt;FIN_INT060_009_MFT&lt;/value&gt;
+    &lt;value name="interfaceModule"&gt;CPRI_FIN_ESB_INT060_009_EmployeeMasterInformation_COP&lt;/value&gt;
+    &lt;value name="level"&gt;1.0&lt;/value&gt;
+  &lt;/record&gt;
+&lt;/IDataXMLCoder&gt;
+
+]]&gt;</inputDataForSvc>
+        <outputMap />
+        <runAlways>false</runAlways>
+        <serviceName>CapriCIFCommon.utils.mftCIFLog:sendErrorMessage</serviceName>
+    </isSvcInvocationFileTask>
+</scheduledAction></data></asset></assetType></AssetData>
