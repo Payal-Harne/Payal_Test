@@ -15,15 +15,7 @@
 				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
-			<mftalias name="TestQA2">
-				<host>10.219.141.54</host>
-				<port>53121</port>
-				<user>deployer</user>
-				<pwd>Deployer</pwd>
-				<useSSL>true</useSSL>
-				<version>10.7</version>
-				<Test>true</Test>
-			</mftalias>
+			
 		</MFT>
 		<Repository>
 			<repalias name="RepoSource_MK_RTL_RTL-Stores_INT001_001_ShiftUploadReports_RPCN_MFT_Event_Only_QA">
