@@ -18,8 +18,8 @@
 			<mftalias name="TestQA2">
 				<host>10.219.141.54</host>
 				<port>53121</port>
-				<user>deploy</user>
-				<pwd>{AES}Bq5Vo3RJfqUuLO+0hhhoMg==</pwd>
+				<user>deployer</user>
+				<pwd>Deployer</pwd>
 				<useSSL>true</useSSL>
 				<version>10.7</version>
 				<Test>true</Test>
