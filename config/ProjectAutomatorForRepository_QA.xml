@@ -12,7 +12,7 @@
 				<user>deploy</user>
 				<pwd>{AES}Bq5Vo3RJfqUuLO+0hhhoMg==</pwd>
 				<useSSL>true</useSSL>
-				<version>10.3</version>
+				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
 			<mftalias name="RepoMFTTarget_QA2">
@@ -21,7 +21,7 @@
 				<user>deploy</user>
 				<pwd>{AES}Bq5Vo3RJfqUuLO+0hhhoMg==</pwd>
 				<useSSL>true</useSSL>
-				<version>10.3</version>
+				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
 		</MFT>
