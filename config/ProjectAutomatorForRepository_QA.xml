@@ -6,22 +6,22 @@
 	</DeployerServer>
   <Environment>
 	  <MFT>
-			<mftalias name="RepoMFTTarget_QA1">
+			<mftalias name="TestQA1">
 				<host>10.219.140.119</host>
 				<port>53111</port>
 				<user>deploy</user>
 				<pwd>{AES}Bq5Vo3RJfqUuLO+0hhhoMg==</pwd>
 				<useSSL>true</useSSL>
-				<version>10.3</version>
+				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
-			<mftalias name="RepoMFTTarget_QA2">
+			<mftalias name="TestQA2">
 				<host>10.219.141.54</host>
 				<port>53121</port>
 				<user>deploy</user>
 				<pwd>{AES}Bq5Vo3RJfqUuLO+0hhhoMg==</pwd>
 				<useSSL>true</useSSL>
-				<version>10.3</version>
+				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
 		</MFT>
