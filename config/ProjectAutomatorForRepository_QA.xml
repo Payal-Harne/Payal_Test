@@ -6,7 +6,7 @@
 	</DeployerServer>
   <Environment>
 	  <MFT>
-			<mftalias name="RepoMFTTarget_QA1">
+			<mftalias name="TestQA1">
 				<host>10.219.140.119</host>
 				<port>53111</port>
 				<user>deploy</user>
