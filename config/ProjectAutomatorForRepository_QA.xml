@@ -15,7 +15,7 @@
 				<version>10.7</version>
 				<Test>true</Test>
 			</mftalias>
-			<mftalias name="RepoMFTTarget_QA2">
+			<mftalias name="TestQA2">
 				<host>10.219.141.54</host>
 				<port>53121</port>
 				<user>deploy</user>
